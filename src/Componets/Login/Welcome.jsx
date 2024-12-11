@@ -8,7 +8,7 @@ import { FaUser, FaEnvelope, FaPhone, FaLock, FaBuilding, FaImage } from "react-
 const Welcome = () => {
   const [view, setView] = useState("welcome"); // State to manage what to display
 
-  // Handlers to switch views
+
   const handleCreateAccountClick = () => setView("createAccount");
   const handleLoginClick = () => setView("login");
 
@@ -23,7 +23,7 @@ const Welcome = () => {
       }}
     >
     
-      <div className="relative flex flex-col justify-start items-center w-11/12 max-w-lg p-6 rounded-2xl bg-gray-600 bg-opacity-70 text-white shadow-lg">
+      <div className="relative flex flex-col justify-start items-center w-11/12 max-w-lg p-6 rounded-2xl bg-gray-600  text-white shadow-lg">
         {/* Conditional Rendering */}
         {view === "welcome" && (
           <section className="relative flex flex-col items-center z-10 mt-10">

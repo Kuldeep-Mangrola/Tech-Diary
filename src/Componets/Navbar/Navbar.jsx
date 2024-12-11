@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { FaUserCircle } from "react-icons/fa";
 
 function Navbar() {
@@ -16,7 +17,7 @@ function Navbar() {
         <div className="font-semibold text-4xl flex flex-row gap-4 items-center justify-center">
           <FaUserCircle className="border-4 rounded-full border-yellow-400 p-1 transform transition-all duration-300 hover:scale-110 hover:rotate-12" />
           <h2 className="font-sans text-yellow-400 text-base sm:text-sm md:text-lg lg:text-xl tracking-wide pt-1">
-            Kuldeep Mangrola
+            TECH DIARY
           </h2>
         </div>
 

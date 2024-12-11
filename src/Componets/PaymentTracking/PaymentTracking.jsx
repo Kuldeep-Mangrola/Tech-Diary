@@ -26,7 +26,7 @@ const PaymentTracking = () => {
   }, []);
 
   return (
-    <div className="bg-gray-800 min-h-screen flex flex-col items-center py-8 px-4">
+    <div className="bg-gray-800 min-h-screen flex flex-col my-12 items-center py-8 px-4">
       <h2 className="bg-yellow-400 text-gray-800 text-xl font-bold text-center py-2 px-4 rounded-lg mb-6 uppercase">
         Payment Tracking
       </h2>

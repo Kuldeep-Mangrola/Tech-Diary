@@ -6,7 +6,7 @@ function Feature() {
   return (
     <div className="bg-gray-800  text-white py-10">
       <div className="text-center mb-10">
-        <h1 className="text-4xl font-extrabold text-yellow-500 animate-bounce">
+        <h1 className="text-4xl font-extrabold text-yellow-500">
           Tech Diary Features
         </h1>
         <p className="text-gray-400 mt-2">Explore the key features of Tech Diary</p>

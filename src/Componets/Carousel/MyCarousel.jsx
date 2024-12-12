@@ -1,6 +1,6 @@
 import React from "react";
 import { Carousel } from "react-bootstrap";
-import { slides } from "../../assets/image/assest"; // Ensure slides are correctly imported
+import { slides } from "../../assets/image/assest"; 
 
 function MyCarousel() {
   return (
@@ -15,7 +15,7 @@ function MyCarousel() {
         <Carousel.Item key={index}>
           
           <div
-            className="relative w-full h-[600px] overflow-hidden"
+            className="relative w-full h-[500px] overflow-hidden"
             style={{
               backgroundImage: `url(${slide.image})`,
               backgroundSize: "cover",
@@ -26,8 +26,7 @@ function MyCarousel() {
             
             <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
-            {/* Content Section */}
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center p-6 bg-white/80 backdrop-blur-md rounded-lg shadow-xl max-w-[400px]">
+            {/* <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center p-6 bg-white/80 backdrop-blur-md rounded-lg shadow-xl max-w-[400px]">
               <h2 className="text-4xl font-extrabold text-[#F7444E] leading-tight">
                 {slide.title1}
               </h2>
@@ -35,7 +34,7 @@ function MyCarousel() {
                 {slide.title2}
               </h3>
               <p className="mt-4 text-lg text-gray-800">{slide.description}</p>
-            </div>
+            </div> */}
           </div>
         </Carousel.Item>
       ))}

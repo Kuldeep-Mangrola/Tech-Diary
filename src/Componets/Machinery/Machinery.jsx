@@ -8,8 +8,9 @@ function Machinery() {
   const navigate = useNavigate();
 
   const handleButtonClick = () => {
-    navigate('/details'); 
+    navigate('/start-entry'); 
   };
+
   return (
     <div className="bg-gray-900 py-12">
       <h2 className="text-center text-yellow-400 text-4xl font-extrabold mb-10">
@@ -35,7 +36,10 @@ function Machinery() {
                 <h5 className="text-xl font-semibold text-yellow-400 flex justify-center items-start">
                   {item.name || `Machine ${item.id}`}
                 </h5>
-                <button onClick={handleButtonClick} className="w-full bg-yellow-500 text-gray-800 py-2 rounded-md font-semibold hover:bg-yellow-400 transition-all">
+                <button
+                  onClick={handleButtonClick}
+                  className="w-full bg-yellow-500 text-gray-800 py-2 rounded-md font-semibold hover:bg-yellow-400 transition-all"
+                >
                   Start
                 </button>
               </div>
@@ -43,8 +47,6 @@ function Machinery() {
           ))}
         </div>
       </div>
-
-     
     </div>
   );
 }

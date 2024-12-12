@@ -3,7 +3,7 @@ import { assets } from "../../assets/image/assest";
 
 const StartEntry = () => {
   return (
-    <div className="bg-gray-900 min-h-screen flex flex-col items-center py-10 px-4">
+    <div className="bg-gray-900 min-h-screen flex flex-col my-12 items-center py-10 px-4">
     
       <h1 className="text-3xl font-bold text-gray-300 mb-8">Start Entery</h1>
 

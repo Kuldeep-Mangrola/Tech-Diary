@@ -9,6 +9,7 @@ function Machinery() {
       <h2 className="text-center text-yellow-400 text-4xl font-extrabold mb-10">
         Explore Our Machines
       </h2>
+      
 
       <div className="overflow-x-auto overflow-y-hidden py-6 h-full scrollbar-hide">
         <div className="flex space-x-8 px-6">

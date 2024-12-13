@@ -12,6 +12,8 @@ import StartEntry from "./Componets/StartEntery/StartEntery";
 import ScrollTop from "./Componets/ScrollToTop/ScrollTop";
 import Contact from "./Componets/Contact/Contact";
 import AboutUs from "./Componets/About/AboutUs";
+import MachineMaintenanceApp from "./Componets/MachineMaintainance/MachineMaintenance";
+import EditInformation from "./Componets/EditInformation/EditInformation";
 
 function App() {
   return (
@@ -34,6 +36,8 @@ function App() {
           <Route path="/profile" element={<Profile />} />
           <Route path="/machinery" element={<Machinery />} />
           <Route path="/start-entry" element={<StartEntry />} /> 
+          <Route path="/machine-maintenance" element={<MachineMaintenanceApp />} /> 
+          <Route path="/editInformation" element={<EditInformation />} /> 
         </Routes>
       </div>
     </Router>

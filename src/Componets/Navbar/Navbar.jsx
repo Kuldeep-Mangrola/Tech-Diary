@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { FaUserCircle } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
 import { setLanguage } from "../Language/languageSlice";
@@ -22,13 +23,18 @@ function Navbar() {
   return (
     <div className="bg-gradient-to-r from-gray-700 to-yellow-400 fixed top-0 m-0 w-full z-50 h-16 shadow-lg backdrop-blur-md">
       <div className="flex justify-between items-center px-6 h-14 text-white">
+        
         <div className="font-semibold text-4xl flex flex-row gap-4 items-center justify-center">
-          <FaUserCircle className="border-4 rounded-full border-yellow-400 p-1 transform transition-all duration-300 hover:scale-110 hover:rotate-12" />
+        <Link to="/profile">
+        <FaUserCircle className="border-4 rounded-full border-yellow-400 p-1 transform transition-all duration-300 hover:scale-110  text-white"/>
+          </Link>
+         
           <h2 className="font-sans text-yellow-400 text-base sm:text-sm md:text-lg lg:text-xl tracking-wide pt-1">
             TECH DIARY
           </h2>
         </div>
 
+        
         <button
           className="lg:hidden text-white"
           onClick={() => setIsOpen(!isOpen)}
@@ -49,20 +55,30 @@ function Navbar() {
           </svg>
         </button>
 
+    
         <div
           className={`${
             isOpen ? "block" : "hidden"
           } lg:flex lg:items-center lg:space-x-6 absolute lg:static top-14 left-0 w-full lg:w-auto bg-slate-500 lg:bg-transparent transform transition-all duration-300 pt-3`}
         >
-          <ul className="flex  flex-col lg:flex-row lg:space-x-6 lg:space-y-0 space-y-4 px-5 lg:px-0 py-4 lg:py-0">
-            <li className="">
-              <a
+          <ul className="flex flex-col lg:flex-row lg:space-x-6 lg:space-y-0 space-y-4 px-5 lg:px-0 py-4 lg:py-0">
+            <li>
+              <Link
+                to="/"
                 className="block no-underline py-2 px-4 font-semibold text-gray-600 hover:text-white lg:hover:bg-transparent lg:hover:underline transition-all duration-300 transform hover:scale-110"
-                href="#"
                 onClick={closeMenu}
               >
                 HOME
-              </a>
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/contact"
+                className="block no-underline py-2 px-4 font-semibold text-gray-600 hover:text-white lg:hover:bg-transparent lg:hover:underline transition-all duration-300 transform hover:scale-110"
+                onClick={closeMenu}
+              >
+                CONTACT
+              </Link>
             </li>
             <li>
               <a
@@ -70,22 +86,17 @@ function Navbar() {
                 href="#"
                 onClick={closeMenu}
               >
-                CONTACT
+                ABOUT US
               </a>
             </li>
             <li>
-              <button onClick={handleLanguageToggle}>
-                {/* Change button text based on the current language */}
-                {language === "en" ? "Switch to Hindi" : "Switch to English"}
-              </button>
-            </li>
-            <li>
-              <button
-                className="block no-underline py-2 px-4 font-semibold text-gray-600 hover:text-white lg:hover:bg-transparent lg:hover:underline transition-all duration-300 pulse-button"
-                href="#"
+              <Link
+                to="/login"
+                className="block no-underline py-2 px-4 font-semibold text-gray-600 hover:text-white lg:hover:bg-transparent lg:hover:underline transition-all duration-300 transform hover:scale-110"
+                onClick={closeMenu}
               >
                 LOG IN
-              </button>
+              </Link>
             </li>
           </ul>
         </div>

@@ -1,14 +1,14 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { machine } from "../../assets/image/assest";
-import { motion } from "framer-motion"; 
-import { useNavigate } from 'react-router-dom';
+import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 function Machinery() {
   const navigate = useNavigate();
 
   const handleButtonClick = () => {
-    navigate('/start-entry'); 
+    navigate("/start-entry");
   };
 
   return (
@@ -16,7 +16,6 @@ function Machinery() {
       <h2 className="text-center text-yellow-400 text-4xl font-extrabold mb-10">
         Explore Our Machines
       </h2>
-      
 
       <div className="overflow-x-auto overflow-y-hidden py-6 h-full scrollbar-hide">
         <div className="flex space-x-8 px-6">
@@ -25,7 +24,7 @@ function Machinery() {
               key={item.id}
               className="flex-shrink-0 bg-gray-800 text-white rounded-lg shadow-lg"
               style={{ width: "18rem" }}
-              whileHover={{ scale: 1.05 }} 
+              whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.3 }}
             >
               <img

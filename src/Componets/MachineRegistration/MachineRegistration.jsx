@@ -5,6 +5,7 @@ function MachineRegistration() {
     machineName: "",
     rentType: "",
     image: null,
+    imagePreview: null, // State for image preview
   });
 
   const handleChange = (e) => {
@@ -17,9 +18,11 @@ function MachineRegistration() {
 
   const handleFileChange = (e) => {
     const file = e.target.files[0];
+    const imagePreview = URL.createObjectURL(file); // Create image preview URL
     setFormData((prevData) => ({
       ...prevData,
       image: file,
+      imagePreview: imagePreview, // Save preview URL in state
     }));
   };
 
@@ -34,13 +37,14 @@ function MachineRegistration() {
       machineName: "",
       rentType: "",
       image: null,
+      imagePreview: null, // Reset image preview after submission
     });
 
     alert("Form submitted successfully!");
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-900 p-5">
+    <div className="flex justify-center items-center min-h-screen my-4 bg-gray-900 p-5">
       <div className="bg-gray-800 w-11/12 md:w-2/3 lg:w-1/3 flex flex-col p-8 border border-yellow-500 rounded-2xl shadow-xl">
         <h1 className="text-yellow-400 text-3xl font-bold mb-6 text-center">
           Register Your Machine
@@ -93,21 +97,41 @@ function MachineRegistration() {
             </select>
           </div>
 
-          <label
-            htmlFor="machineImage"
-            className="block text-white mt-4 font-bold text-[18px]"
-          >
-            Upload Machine Image
-          </label>
-          <div className="bg-gray-700 mt-6 flex items-center h-16 rounded-lg w-full">
-            <input
-              type="file"
-              id="machineImage"
-              accept="image/*"
-              onChange={handleFileChange}
-              className="ml-7"
-              required
-            />
+          <div className="mt-4">
+            <label
+              htmlFor="machineImage"
+              className="block text-white font-bold text-[18px]"
+            >
+              Upload Machine Image
+            </label>
+            <div className="bg-gray-700 mt-2 flex items-center justify-between h-16 rounded-lg w-full p-3">
+              <input
+                type="file"
+                id="machineImage"
+                accept="image/*"
+                onChange={handleFileChange}
+                className="hidden"
+                required
+              />
+              <label
+                htmlFor="machineImage"
+                className="text-white cursor-pointer w-full"
+              >
+                {formData.image ? formData.image.name : "Choose a file"}
+              </label>
+            </div>
+            
+            {/* Image Preview */}
+            {formData.imagePreview && (
+              <div className="mt-4">
+                <h3 className="text-white font-bold mb-2">Image Preview</h3>
+                <img
+                  src={formData.imagePreview}
+                  alt="Image Preview"
+                  className="w-full h-48 object-cover rounded-lg shadow-md"
+                />
+              </div>
+            )}
           </div>
 
           <button

@@ -81,13 +81,13 @@ function Navbar() {
               </Link>
             </li>
             <li>
-              <a
+              <Link to={"/about"}
                 className="block no-underline py-2 px-4 font-semibold text-gray-600 hover:text-white lg:hover:bg-transparent lg:hover:underline transition-all duration-300 transform hover:scale-110"
                 href="#"
                 onClick={closeMenu}
               >
                 ABOUT US
-              </a>
+              </Link>
             </li>
             <li>
               <Link

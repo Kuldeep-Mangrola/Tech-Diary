@@ -13,7 +13,7 @@ const Welcome = () => {
 
   return (
     <div
-      className="relative flex justify-center items-center h-screen w-full bg-cover bg-center"
+      className="relative flex justify-center items-center h-screen w-full bg-cover bg-center bg-yellow-400"
       style={{
         backgroundImage: `url(${assets.Machinery})`,
         backgroundSize: "cover",
@@ -48,6 +48,7 @@ const Welcome = () => {
             </div>
 
             {/* Social Icons */}
+            <h2 className="flex flex-col justify-center align-center items-center font-light p-0 mt-10 mb-0 h-1 text-[20px]">follow us here</h2>
             <div className="flex gap-6 mt-6 text-2xl text-yellow-400">
               <Link to={"/insta"}>
                 <FaInstagram className="hover:text-gray-800 transition-all text-yellow-400" />

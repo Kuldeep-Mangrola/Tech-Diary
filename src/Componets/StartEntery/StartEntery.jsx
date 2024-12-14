@@ -1,5 +1,6 @@
 import React from "react";
 import { assets } from "../../assets/image/assest";
+import { Link } from "react-router-dom";
 
 const StartEntry = () => {
   return (
@@ -89,12 +90,14 @@ const StartEntry = () => {
          
 
             <div className="mt-4">
+              <Link to={"/invoice"}>
               <button
                 type="submit"
                 className="w-full bg-yellow-400 text-gray-800 font-bold py-2 rounded-md shadow hover:bg-yellow-500 focus:outline-none focus:ring-2 focus:ring-yellow-400"
               >
                 Submit Entry
-              </button>
+              </button> 
+              </Link>
             </div>
           </form>
         </div>

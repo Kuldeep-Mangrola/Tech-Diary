@@ -4,27 +4,21 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "./Componets/Navbar/Navbar";
 import Home from "./Componets/Home/Home";
 import Welcome from "./Componets/Login/Welcome";
-// import Feature from "./Componets/Feature/Feature"
 import Machinery from "./Componets/Machinery/Machinery";
 import PaymentTracking from "./Componets/PaymentTracking/PaymentTracking";
 import Profile from "./Componets/UserProfile/Profile";
 import StartEntry from "./Componets/StartEntery/StartEntery";
 import ScrollTop from "./Componets/ScrollToTop/ScrollTop";
 import Contact from "./Componets/Contact/Contact";
-import AboutUs from "./Componets/About/AboutUs";
-<<<<<<< HEAD
+import AboutUs from './Componets/About/AboutUs'
 import "bootstrap/dist/css/bootstrap.css";
-// import Navbar from '../src/Componets/Navbar/Navbar'
-import MyCarousel from "../src/Componets/Carousel/MyCarousel";
-// import Machinery from '../src/Componets/Machinery/Machinery'
 // import Invoice from './Componets/Invoice/Invoice';
-// import MachineMantain from './Componets/MachineMantainenc/MachineMantain';
 import MachineRegistration from "./Componets/MachineRegistration/MachineRegistration";
-import MachineMaintenanceApp from "./Componets/MachineMantainenc/MachineMantain";
-=======
-import MachineMaintenanceApp from "./Componets/MachineMaintainance/MachineMaintenance";
-import EditInformation from "./Componets/EditInformation/EditInformation";
->>>>>>> c20a30a9c851faaa02d51850b94a281a35d5c922
+import UpdateMachinery from "./Componets/Machinery_Update/UpdateMachinery";
+import MachineMaintenanceApp from "./Componets/Machine_Mantainanec/MachineMaintan";
+import Billing from "./Componets/Feature/Billing";
+import Invoice from "./Componets/Invoice/Invoice";
+
 
 function App() {
   return (
@@ -43,19 +37,14 @@ function App() {
           <Route path="/github" element={<AboutUs />} />
           <Route path="/linkedin" element={<AboutUs />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="/bill-history" element={<Billing />} />
           <Route path="/payment-tracking" element={<PaymentTracking />} />
           <Route path="/machinery" element={<Machinery />} />
-          <Route path="/profile" element={<Profile />} />
-          <Route path="/machinery" element={<Machinery />} />
-<<<<<<< HEAD
-
           <Route path="/start-entry" element={<StartEntry />} />
+          <Route path="/invoice" element={<Invoice />} />
           <Route path="/add-machinery" element={<MachineRegistration />} />
-=======
-          <Route path="/start-entry" element={<StartEntry />} /> 
-          <Route path="/machine-maintenance" element={<MachineMaintenanceApp />} /> 
-          <Route path="/editInformation" element={<EditInformation />} /> 
->>>>>>> c20a30a9c851faaa02d51850b94a281a35d5c922
+          <Route path="/machine-maintenance" element={<MachineMaintenanceApp/>} />
+          <Route path="/machinery-update" element={<UpdateMachinery/>} />
         </Routes>
       </div>
     </Router>

@@ -63,13 +63,13 @@ const Profile = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 1.2 }}
         >
-          <Link to={"/editInformation"}  className="bg-yellow-500 text-gray-900  px-6 rounded-lg flex items-center justify-center gap-3">
+          <Link to={"/Machinery-Update"}  className="bg-yellow-500 text-gray-900  px-6 rounded-lg flex items-center justify-center gap-3">
           <motion.button
             whileHover={{ scale: 1.05 }}
             className="bg-yellow-500 text-gray-900  px-6 rounded-lg flex items-center justify-center gap-3"
           >
             <FaPencilAlt className="text-xl" />
-            Edit Information
+            Update Machinery
           </motion.button>
           </Link>
 

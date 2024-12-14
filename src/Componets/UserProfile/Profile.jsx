@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 
 const Profile = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-r from-gray-800 via-gray-900 to-black text-white">
+    <div className="min-h-screen bg-gradient-to-r mt-16 from-gray-800 via-gray-900 to-black text-white">
       <div className="max-w-6xl mx-auto p-6">
 
         <motion.div
@@ -43,7 +43,7 @@ const Profile = () => {
 
       
           <div className="flex flex-col justify-center text-center mt-8 md:mt-0 space-y-6">
-            <div className="flex flex-col items-center bg-gray-800 py-4 px-8 rounded-lg shadow-md">
+            <div className="flex flex-col items-center bg-gray-700 py-4 px-8 rounded-lg shadow-md">
               <h2 className="text-xl font-semibold">Account Information</h2>
               <p className="text-gray-500 text-sm">Member since January 2020</p>
             </div>
@@ -69,7 +69,7 @@ const Profile = () => {
             className="bg-yellow-500 text-gray-900  px-6 rounded-lg flex items-center justify-center gap-3"
           >
             <FaPencilAlt className="text-xl" />
-            Update Machinery
+            Update Machinary
           </motion.button>
           </Link>
 

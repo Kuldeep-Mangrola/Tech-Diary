@@ -70,10 +70,23 @@ const Welcome = () => {
         )}
 
         {view === "createAccount" && (
-          <section className="relative flex flex-col items-center z-10 mt-10">
+          <section className="relative flex flex-col items-center z-10 mt-12">
             <h1 className="text-2xl font-semibold">Create Account</h1>
             <form className="flex flex-col gap-4 mt-6 w-full max-w-sm justify-center items-center">
               {/* Full Name */}
+              <div className="flex items-center gap-2">
+                <label htmlFor="Photo" className="text-yellow-400 text-xl">
+                  <FaImage />
+                </label>
+                <input
+                  type="file"
+                  placeholder="image"
+                  accept="image/*"
+                  id="Photo"
+                  required
+                  className="flex-1 p-2 rounded-full border-2 border-yellow-400 bg-gray-800 text-yellow-400 "
+                />
+              </div>
               <div className="flex items-center gap-2">
                 <label htmlFor="Full_Name" className="text-yellow-400 text-xl">
                   <FaUser />
@@ -146,19 +159,7 @@ const Welcome = () => {
               </div>
 
               {/* Image Upload */}
-              <div className="flex items-center gap-2">
-                <label htmlFor="Photo" className="text-yellow-400 text-xl">
-                  <FaImage />
-                </label>
-                <input
-                  type="file"
-                  placeholder="image"
-                  accept="image/*"
-                  id="Photo"
-                  required
-                  className="flex-1 rounded-md p-2 border-2 border-yellow-400 bg-gray-800 text-yellow-400 "
-                />
-              </div>
+             
 
               <button
                 type="submit"
@@ -181,10 +182,11 @@ const Welcome = () => {
             <h1 className="text-2xl font-semibold">Login</h1>
             <form className="flex flex-col gap-4 mt-6 w-full max-w-sm">
               <input
-                type="email"
-                placeholder="Email"
-                required
-                id="email"
+               type="tel"
+               maxLength={10}
+               pattern="\d{10}"
+               placeholder="Mobile Number"
+               id="MobileNumber"
                 className="rounded-md p-2 border-2 border-yellow-400 bg-gray-800 text-yellow-400"
               />
               <input

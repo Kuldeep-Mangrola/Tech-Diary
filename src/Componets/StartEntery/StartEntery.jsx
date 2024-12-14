@@ -105,12 +105,12 @@ const StartEntry = () => {
     
         <div className="space-y-6">
           
-          <div className="bg-yellow-400 text-gray-800 shadow-md rounded-lg p-6">
+          {/* <div className="bg-yellow-400 text-gray-800 shadow-md rounded-lg p-6">
             <h2 className="text-lg font-bold mb-2">Rental Summary</h2>
             <p className="text-sm">Total Rentals: <span className="font-semibold">12</span></p>
             <p className="text-sm">Total Rent Collected: <span className="font-semibold">₹30,000</span></p>
             <p className="text-sm">Most Frequent Customer: <span className="font-semibold">Aman Rathod</span></p>
-          </div>
+          </div> */}
 
           
           <div className="bg-white shadow-md rounded-lg p-6">

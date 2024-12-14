@@ -59,13 +59,13 @@ function Navbar() {
         <div
           className={`${
             isOpen ? "block" : "hidden"
-          } lg:flex lg:items-center lg:space-x-6 absolute lg:static top-14 left-0 w-full lg:w-auto bg-slate-500 lg:bg-transparent transform transition-all duration-300 pt-3`}
+          } lg:flex lg:items-center lg:space-x-6 absolute lg:static top-14 left-0 w-full lg:w-auto  lg:bg-transparent transform transition-all duration-300 pt-3 ${isOpen?"bg-gradient-to-r from-gray-700 to-yellow-400":"bg-slate-500 "}`}
         >
           <ul className="flex flex-col lg:flex-row lg:space-x-6 lg:space-y-0 space-y-4 px-5 lg:px-0 py-4 lg:py-0">
             <li>
               <Link
                 to="/"
-                className="block no-underline py-2 px-4 font-semibold text-gray-600 hover:text-white lg:hover:bg-transparent lg:hover:underline transition-all duration-300 transform hover:scale-110"
+                className={`block no-underline py-2 px-4 font-semibold hover:text-white lg:hover:bg-transparent lg:hover:underline transition-all duration-300 transform hover:scale-110 ${isOpen?"text-yellow-400 ms-3":"text-gray-600"}`}
                 onClick={closeMenu}
               >
                 HOME
@@ -74,15 +74,15 @@ function Navbar() {
             <li>
               <Link
                 to="/contact"
-                className="block no-underline py-2 px-4 font-semibold text-gray-600 hover:text-white lg:hover:bg-transparent lg:hover:underline transition-all duration-300 transform hover:scale-110"
+                className={`block no-underline py-2 px-4 font-semibold hover:text-white lg:hover:bg-transparent lg:hover:underline transition-all duration-300 transform hover:scale-110 ${isOpen?"text-yellow-400 ms-3":"text-gray-600"}`}
                 onClick={closeMenu}
               >
                 CONTACT
               </Link>
             </li>
             <li>
-              <Link to={"/about"}
-                className="block no-underline py-2 px-4 font-semibold text-gray-600 hover:text-white lg:hover:bg-transparent lg:hover:underline transition-all duration-300 transform hover:scale-110"
+              <a
+                className={`block no-underline py-2 px-4 font-semibold hover:text-white lg:hover:bg-transparent lg:hover:underline transition-all duration-300 transform hover:scale-110 ${isOpen?"text-yellow-400 ms-3":"text-gray-600"}`}
                 href="#"
                 onClick={closeMenu}
               >
@@ -92,7 +92,7 @@ function Navbar() {
             <li>
               <Link
                 to="/login"
-                className="block no-underline py-2 px-4 font-semibold text-gray-600 hover:text-white lg:hover:bg-transparent lg:hover:underline transition-all duration-300 transform hover:scale-110"
+                className={`block no-underline py-2 px-4 font-semibold hover:text-white lg:hover:bg-transparent lg:hover:underline transition-all duration-300 transform hover:scale-110 ${isOpen?"text-yellow-400 ms-3":"text-gray-600"}`}
                 onClick={closeMenu}
               >
                 LOG IN

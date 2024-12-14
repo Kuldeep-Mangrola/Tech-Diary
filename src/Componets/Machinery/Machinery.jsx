@@ -12,7 +12,7 @@ function Machinery() {
   };
 
   return (
-    <div className="bg-gray-900 py-12">
+    <div className="bg-gray-900 py-12 ">
       <h2 className="text-center text-yellow-400 text-4xl font-extrabold mb-10">
         Explore Our Machines
       </h2>

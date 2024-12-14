@@ -81,7 +81,7 @@ function Navbar() {
               </Link>
             </li>
             <li>
-              <a
+              <Link
                 className={`block no-underline py-2 px-4 font-semibold hover:text-white lg:hover:bg-transparent lg:hover:underline transition-all duration-300 transform hover:scale-110 ${isOpen?"text-yellow-400 ms-3":"text-gray-600"}`}
                 href="#"
                 onClick={closeMenu}
